@@ -6,7 +6,7 @@ import "./ChatPage.css";
 import { app } from "./firebase";
 import { getAuth, signOut } from "firebase/auth";
 
-const socket = io("http://localhost:3000"); // backend URL
+const socket = io("https://talknest-2.onrender.com"); // backend URL
 const auth = getAuth(app);
 
 export default function ChatPage() {
@@ -39,7 +39,7 @@ export default function ChatPage() {
   useEffect(() => {
     const fetchReceiver = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/Chats/${id}`);
+        const res = await fetch(`https://talknest-2.onrender.comChats/${id}`);
         const data = await res.json();
         setReceiver(data);
       } catch (err) {
@@ -145,3 +145,4 @@ export default function ChatPage() {
     </div>
   );
 }
+
