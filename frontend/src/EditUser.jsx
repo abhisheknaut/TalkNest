@@ -22,7 +22,7 @@ const EditUser = () => {
       About: about,
     };
     try {
-      const res = await fetch(`http://localhost:3000/Edituser/${id}`, {
+      const res = await fetch(`https://talknest-2.onrender.com/Edituser/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
@@ -100,3 +100,4 @@ const EditUser = () => {
 };
 
 export default EditUser;
+
