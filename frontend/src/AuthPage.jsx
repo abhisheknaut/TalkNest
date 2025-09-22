@@ -37,7 +37,7 @@ export default function AuthPage() {
       email,
       password
     ).then(navigate("/users"));
-    const response = await fetch("http://localhost:3000/getUser", {
+    const response = await fetch("https://talknest-2.onrender.com/getUser", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userDisplay: name }),
@@ -52,7 +52,7 @@ export default function AuthPage() {
     await signInWithEmailAndPassword(auth, email, password).then(
       navigate("/users")
     );
-    const response = await fetch("http://localhost:3000/getUser", {
+    const response = await fetch("https://talknest-2.onrender.com/getUser", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userDisplay: name }),
@@ -75,7 +75,7 @@ export default function AuthPage() {
       About: about,
       image: imageUrl,
     };
-    const UserData = await fetch("http://localhost:3000/receiveUserData", {
+    const UserData = await fetch("https://talknest-2.onrender.com/receiveUserData", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newuser),
@@ -190,3 +190,4 @@ export default function AuthPage() {
     </div>
   );
 }
+
