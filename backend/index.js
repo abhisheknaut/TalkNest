@@ -96,7 +96,7 @@ app.get("/ShowUser", async (req, res) => {
     console.error("Error in /ShowUser:", err);
     res.json([]);
   }
-});
+})
 
 // Get user by ID
 app.get("/Chats/:id", async (req, res) => {
@@ -106,7 +106,7 @@ app.get("/Chats/:id", async (req, res) => {
   } catch {
     res.status(404).json({ error: "User not found" });
   }
-});
+})
 
 // ✅ New route for chat history between two users
 app.get("/messages/:sender/:receiver", async (req, res) => {
@@ -141,4 +141,5 @@ app.put('/Edituser/:id',async(req,res)=>{
 server.listen(port, () =>
   console.log(`🚀 Server running on http://localhost:${port}`)
 );
+
 
