@@ -19,7 +19,7 @@ export default function UserDashboard() {
 
   const getUser = async () => {
     try {
-      const res = await fetch("http://localhost:3000/ShowUser");
+      const res = await fetch("https://talknest-2.onrender.com/ShowUser");
       const data = await res.json();
       if (Array.isArray(data)) {
         setUsers(data);
@@ -109,3 +109,4 @@ export default function UserDashboard() {
     </div>
   );
 }
+
